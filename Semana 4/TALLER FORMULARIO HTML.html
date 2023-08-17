@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="./css/frmcontactos.css">
+</head>
+<body>
+    <header>
+        <img src="./img/incap.png" width="100" height="100" alt="">
+        <h1>FORMULARIO INCAP</h1>
+    </header>
+    <nav>
+        <p>Este formulario es para registrar el ingreso de un estudiante a Incap</p>
+    </nav>
+    <section>
+        <form action="">
+            <fieldset>
+                <label>Nombre completo:</label>
+                <input type="text" placeholder="ingrese su nombre" autofocus required>
+                <br><br>
+                <label>Email:</label>
+                <input type="email" placeholder="ingrese su correo personal" required>
+                <br><br>
+                <label>contrseña:</label>
+                <input type="password" placeholder="ingrese su contraseña personal" required>
+                <br><br>
+                <!-- sección de control checkbox -->
+                <label>Selecciona tus hobbies:</label>
+                <br>
+                <input type="checkbox" name="cine">Cine
+                <input type="checkbox" name="lectura">Lectura
+                <input type="checkbox" name="deporte">Deporte
+                <br><br>
+                <!-- sección de radio -->
+                <label>Estado civil:</label>
+                <br>
+                <input type="radio" name="estadocivil" value="casado">Casado(a)
+                <input type="radio" name="estadocivil" value="soltero">Soltero(a)
+                <input type="radio" name="estadocivil" value="viudo">Viudo(a)
+                <br><br>
+                <!-- sección decontrol de lista de opciones -->
+                <label>Programas técnicos Incap</label>
+                <select name="select">
+                    <option value="">Seleccione programa...</option><br>
+                    <option value="sistemas">Programación BBDD</option><br>
+                    <option value="diseño">Diseño Gráfico</option><br>
+                    <option value="contabilidad">Contabilidad</option><br><br>
+                </select>
+                <br>
+                <label>Fecha de nacimiento</label><br>
+                <input type= "date" name="fechanac" title="Ingrese fecha de nacimiento"><br><br>
+                <label>Coloque su edad</label><br>
+                <input type="number" min="1" max="120" title="Ingrese su edad actual"><br><br>
+                <label>Suba su foto reciente</label><br>
+                <input type="file" name="archivo"><br><br>
+                <label>Comentario</label><br>
+                <textarea cols="40" rows="5"></textarea>
+            </fieldset>
+            <br><br>
+            <button type="submit">Enviar</button>
+            <button type="reset">Cancelar</button>
+        </form>
+    </section>
+    <footer>
+        Derechos reservados &copy;2023 @Cristhian Prieto
+    </footer>
+</body>
+</html>
