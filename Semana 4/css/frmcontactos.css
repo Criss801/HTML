@@ -2,7 +2,7 @@ body{
     background-color: lightskyblue;
 }
 header{
-    background-color: black !important;
+    background-color: rgb(13, 0, 83) !important;
     border: 2px solid blue;
     border-radius: 20px;
     display: flex;
@@ -15,8 +15,8 @@ header img{
     padding: 25px;
 }
 nav{
-    background-color: rgb(85, 199, 252);
-    border: 2px solid blue;
+    background-color: rgb(159, 224, 255);
+    border: 2px solid black;
     border-radius: 22px;
 }
 nav p{
@@ -25,5 +25,61 @@ nav p{
     font-size: 40px;
 }
 section{
-    
+    width: 40%;
+    border: 1px solid black;
+    padding: 10px 10px;
+    border-radius: 20px;
+    margin: 10px auto;
+    background:linear-gradient(rgb(51, 88, 255), rgb(137, 208, 255));
+}
+form{
+    background-color: rgb(172, 236, 255);
+    width: 70%;
+    border-radius: 20px;
+    margin: 10px auto;
+    box-shadow: outset 0 0 10px rgb(198, 237, 255);
+}
+fieldset{
+    border-style: none;
+}
+label{
+    font-size: 18px;
+}
+textarea{
+    resize: both;
+    max-height: 100px;
+    max-width: 480px;
+}
+input:focus , textarea:focus{
+    border-color: rgb(20, 0, 255);
+    cursor: pointer;
+    box-shadow: inset 0 0 8px rgba(0, 29, 255, 0.6);
+    outline:0 none;
+}
+form button{
+    width: 40%;
+    margin: 15px 0px 20px 25px;
+    height: 40px;
+    background: radial-gradient(lightskyblue, rgb(39, 122, 247));
+    border: 2px solid black;
+    color: black;
+    border-radius: 15px;
+}
+form button:hover{
+    background: rgb(184, 184, 184);
+    text-decoration: underline;
+    color: black;
+    cursor: pointer;
+}
+form input{
+    height: 20px;
+    box-sizing: border-box;
+    color: black;
+    outline: none;
+    border: 1px solid black;
+}
+footer{
+    font-size: 16px;
+    text-align: center;
+    color: darkblue;
 }
