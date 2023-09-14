@@ -1,0 +1,30 @@
+body{
+    background: linear-gradient(rgb(255, 95, 162), rgb(252, 200, 155));
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+body h1{
+    font-family: comic sans ms;
+    text-align: center;
+    color: whitesmoke;
+}
+form table{
+    width: 60%;
+    margin: 2px auto;
+}
+form table caption{
+    font-size: 22px;
+    color: whitesmoke;
+    padding: 10px;
+}
+form table th, td{
+    width: 25%;
+    text-align: left;
+    vertical-align: top;
+    border: 2px solid rgb(250, 197, 129);
+    padding: 3px;
+}
+input{
+    background-color: white;
+}
