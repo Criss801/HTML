@@ -275,10 +275,8 @@ li a.active{
 	color: #d83131;
 }
 
-
 .service{
-	background: url(../img/pattern.jpg);
-	background-repeat: repeat-y;
+	background:#d83131;
 	margin-top: 40px;
 }
 .service h2{
@@ -306,7 +304,7 @@ li a.active{
 .service-img {
   width: 205px;
   height: 125px;
-  background: #3a9ecb;
+  background: #d83131;
   position: relative;
 }
 .single-service h3{
@@ -318,9 +316,6 @@ li a.active{
 .service-img img{
 	position: absolute;
 }
-
-
-
 .sec_video{
 	background: #fff;
 	margin-top: 30px;
@@ -581,7 +576,7 @@ responsive area
   	.carousel-caption button {
 		 width: 180px;
 		 height: 50px;
-		 background: #3a9ecb;
+		 background: #d83131;
 		 color: #fff;
 		 font-size: 22px;
 	}
@@ -691,7 +686,7 @@ responsive area
 	}
 	.about h2 {
 	  font-size: 50px;
-	  color: #42b3e5;
+	  color: #d83131;
 	  margin-top: 30px;
 	}
 	.service h2 {
