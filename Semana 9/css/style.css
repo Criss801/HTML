@@ -2,7 +2,7 @@
 body{
 	margin: 0;
 	padding: 0;
-	font-family: 'Josefin Sans', sans-serif;
+	font-family: 'Josefin Sans', sans-serif; 
 }
 li{
 	list-style: none;
@@ -451,12 +451,12 @@ li a.active{
 	padding: 25px 0;
 
 }
-.footer a i.fa{
+.footer a i.fa, i.fa-brands{
 	font-size: 24px;
 	color: #b1b1b1;
 	padding: 22px 10px;
 }
-.footer a i.fa:hover{
+.footer a i.fa:hover, i.fa-brands:hover{
 	color: #d83131;
 }
 
