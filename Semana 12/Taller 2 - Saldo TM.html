@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SALDO TM</title>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body>
+    <center>
+        <img src="./img/TM.jpeg" width="150" height="150">
+        <h2>Ingreso saldo tarjeta Transmilenio</h2>
+        <br>
+        <script>
+            let saldo;
+            const tm=2950; //valor mínimo pasaje
+            saldo=parseInt(prompt("Ingresa saldo de tu tarjeta TM"));
+            if (saldo>=tm){
+                swal("Estimado usuario","Ingrese al sistema TM","success");
+            }else{
+                swal("Saldo insuficiente","Saldo insuficiente: recarga","error");
+            }
+        </script>
+    </center>
+</body>
+</html>
