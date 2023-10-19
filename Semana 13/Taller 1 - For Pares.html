@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CICLO FOR PARES</title>
+</head>
+<body>
+    <center>
+    <h1>GENERACIÓN DE NÚMEROS PARES</h1>
+    <h2>ESCOGIDOS POR EL USUARIO</h2>
+    <br>
+    <script>
+        //variable
+        let inicio, final; //ciclo for
+        let num=0; //contador de números pares
+        inicio=parseInt(prompt("Número inicial rango"));
+        final=parseInt(prompt("Número final rango"));
+        //ciclo for
+        for(f=inicio;f<=final;f++){
+            //validación de números pares
+            if(f%2==0){
+                document.write("Número par: "+f+"<br>");
+                num++; //contador de números pares
+            }
+        }
+        //salida
+        document.write("*******************************************"+"<br>");
+        document.write("<br>");
+        document.write("Cantidad de números pares generados: "+num+"<br>");
+        document.write("*******************************************"+"<br>");
+    </script>
+    </center>
+</body>
+</html>

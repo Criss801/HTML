@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- link de sitio Sweetalert mensajes más elegantes-->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body>
+    <center>
+        <img src="./img/incap.png" width="150" height="150">
+        <h1>INICIO POR - IF</h1>
+        <h2>CALIDACIÓN DE INGRESO USUARIO</h2>
+        <br>
+        <script>
+            //variables de entrada
+            var pasw2; //password ingresado por usuario
+            var sw=0; //var tipo switch controla ingreso usuario -apagada-
+            var clave=123; //contraseña oficial
+            //proceso
+            for(f=1;f<=3;f++){
+                pasw2=parseInt(prompt("Ingresa contraseña de ingreso"));
+                if (pasw2==clave){
+                    swal("Apreciado usuario","ACCESO OTROGADO","success");
+                    sw=1; //camboia a encendido
+                    break;
+                }
+            }
+            //salida pantalla
+            if (sw==0){
+                swal("Pareciado usuario","ACCESO BLOQUEADO","error");
+                document.write("<font color='red' size=14>BLOCKED ACCESS</font>");
+            } else{
+                document.write("<font color='blue' size=14>GRANTED ACCESS</font>");
+            }
+        </script>
+    </center>
+</body>
+</html>
