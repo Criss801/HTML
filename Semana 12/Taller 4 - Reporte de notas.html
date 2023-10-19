@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONDICIONES ANIDADAS</title>
+    <link rel="stylesheet" href="./css/estilos01.css">
+</head>
+<body>
+    <h1>CONDICIONES ANIDADAS</h1>
+    <p>Programa que captura nombre, curso, tres notas, calcula la definitiva y su clasificación es:</p>
+    <P><3.0 REPROBADO, =3.0 ACEPTABLE, >3.0 APROBADO</p>
+    <SCript>
+        let nombre=prompt("Ingresa tu nombre");
+        let curso=prompt("Ingresa tu curso actual");
+        let nota1=prompt("Ingresa la primera nota");
+        let nota2=prompt("Ingresa la segunda nota");
+        let nota3=prompt("Ingresa la tercera nota");
+        definitiva=(nota1+nota2+nota3);
+        document.write("<table><caption>RELACIÓN NOTAS</caption><tr><th>NOMBRE</th><td>",nombre,"</td></tr><tr><th>CURSO</th><td>",curso,"</td></tr><tr><th>NOTA 1</th><td>",nota1,"</td></tr><tr><th>NOTA 2</th><td>",nota2,"</td></tr><tr><th>NOTA 3</th><td>",nota3,"</td></tr><tr><th>DEFINITIVA</th><td>",definitiva,"</td></tr><tr>");
+        if(definitiva<3.0){
+            document.write("<th>ESTADO</th><td>REPROBADO</td></tr></table>");
+        }
+        else if(definitiva==3.0){
+            document.write("<th>ESTADO</th><td>ACEPTABLE</td></tr></table>");
+        }
+        else if(definitiva>3.0){
+            document.write("<th>ESTADO</th><td>APROBADO</td></tr></table>");
+        }
+        else{
+            document.write("<th>ESTADO</th><td>*****</td></tr></table>");
+        }
+    </SCript>
+</body>
+</html>
