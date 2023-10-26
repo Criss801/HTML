@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MÉTODO SPLICE</title>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body>
+    <center>
+        <h1>CREAR UN ARRAY POR CAPTURA</h1>
+        <h2>Método splice - ciclo for</h2>
+        <br><br>
+        <p>El nuevo array es el siguiente:...</p>
+        <br>
+        <script>
+            let num;
+            let std=new Array();
+            //captura array
+            num=parseInt(prompt("Ingresa cantidad de nombres std en array"));
+            for(i=0;i<num;i++){
+                std[i]=prompt("Ingresa nombre std");
+            }
+            //buscar std en array
+            let dator=prompt("Ingresa nombre std a eliminar");
+            //indice de elemento
+            let find=std.indexOf(dator.trim());
+            //si el estudiante es encontrado = 0, de lo contrario = -1
+            if (find>-1){
+                swal("Apreciado usuario","estudiante fue encontrado y eliminado en array","success");
+                var index=std.splice(find,1);
+            } else{
+                swal("Apreciado usuario","estudiante NO fue encontrado en array","error");
+            }
+            document.write(std+",");
+        </script>
+    </center>
+</body>
+</html>

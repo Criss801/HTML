@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FACTURA ARRAY</title>
+</head>
+<body>
+    <center>
+        <h1>FACTURA VENTAS POS</h1>
+        <h1>SUPÉRMERCADO MERCATODES</h1>
+        <br>
+        <script>
+            //Funcion para símbolo monetario
+            const SPeso = new Intl.NumberFormat('es-CO', {
+            style: 'currency',
+            currency: 'COP',
+            minimumFractionDigits: 0
+            });
+            //entrada de variables
+            var suma=0;
+            var subt=0;
+            var netop=0;
+            var desc=0;
+            var iva=0;
+            var fpago=0;
+            var pago=0;
+            var num=0;
+            var cambio=0;
+            var f=new Date();
+            var nombrep=new Array();
+            var precio=new Array();
+            var cant=new Array();
+            var subt=Array();
+            //captura datos factura
+            nomstd=prompt("Ingresa nombre del cajero");
+            num=parseInt(prompt("Ingresa cantidad de productos a comprar"));
+            var i;
+            for (i=0;i<num;i++){
+                nombrep[i]=prompt("Ingresa nombre del producto a comprar");
+                precio[i]=prompt("Ingresa el precio del producto a comprar");
+                cant[i]=prompt("Ingresa la cantidad de productos a comprar");
+                subt[i]=precio[i]*cant[i] //sumador de totales parciales
+                suma=suma+subt[i]; //sumadopr factura
+            }
+            //proceso liquidación final factura
+            fpago=parseInt(prompt("Ingresa forma de pago: [1=efectivo // 2=nequi // 3=tarjeta crédito]"));
+            if(fpago==1){
+                desc=suma*0.10;
+            } else{
+                desc=suma*0;
+            }
+            iva=(suma-desc)*0.19;
+            netop=suma-desc+iva;
+            alert ("total a pagar factura $$"+"\n"+netop);
+            if(fpago==1){
+                pago=parseInt(prompt("Ingresa monto efectivo a pagar"));
+                cambio=pago-netop
+            } else{
+                pago=parseInt(prompt("Ingresa monto efectivo a pagar"));
+                netop=pago;
+            }
+            //salida factura
+            document.write("*******************************"+"ALMACEN MERCATODES"+"*******************************"+"<br>");
+            document.write("*******************************"+"Factura de venta POS"+"*******************************"+"<br>");
+            document.write("Productos comprados:"+num+"<br>"+"<br>");
+            document.write("Producto:"+"&nbsp;&nbsp&nbsp&nbsp&nbsp"+"Precio:"+"&nbsp;&nbsp&nbsp&nbsp&nbsp"+"Cantidad:"+"&nbsp;&nbsp&nbsp&nbsp&nbsp"+"Valor:"+"<br>"+"<br>");
+            //SECCION IMPRIMIR DATOS LIQUIDADOS FACTURA
+            var i;
+            for (var i=0 ; i<num ; i++) {
+            document.write( nombrep[i] +"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+ SPeso.format(precio[i])+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+ cant[i] +"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+SPeso.format(subt[i]) +'<br>');
+            }
+            document.write('**********************'+'<br>');
+            document.write('<br>'+ 'SUBTOTAL:'+'<br>'+'<br>');
+            document.write('&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'+SPeso.format(suma) +'<br>'+'<br>');
+            document.write('Descuento:'+'<br>'+'<br>');
+            document.write('&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'+SPeso.format(desc) +'<br>'+'<br>');
+            document.write('Iva:'+'<br>'+'<br>');
+            document.write('&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'+SPeso.format(iva) +'<br>'+'<br>');
+            document.write('Neto a pagar:'+'<br>'+'<br>');
+            document.write('&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'+SPeso.format(netop)+'<br>'+'<br>');
+            document.write('Efectivo pagado:'+'<br>'+'<br>');
+            document.write('&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'+SPeso.format(pago)+'<br>'+'<br>');
+            document.write('Cambio:'+'<br>'+'<br>');
+            document.write('&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'+SPeso.format(cambio)+'<br>'+'<br>');
+            // SECCION DE  PIE DE FACTURA VENTAS POS
+            document.write("Registrado:.."+ f.getDate() + "/" + (f.getMonth() +1) + "/" + f.getFullYear()+'&nbsp;&nbsp;&nbsp;&nbsp;'+ f.getHours()+":"+f.getMinutes()+":"+f.getSeconds()+"<br>"+"<br>");
+            document.write('******'+'ATENDIDO POR: '+nomstd+'*******'+'<br>'+'<br>');
+            document.write('******'+'GRACIAS POR SU COMPRA: UD.ES UN EXCELENTE CLIENTE'+'********'+'<br>');
+        </script>
+    </center>
+</body>
+</html>

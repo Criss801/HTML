@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>METODO INDEX OF</title>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body>
+    <center>
+        <img src="./img/incap.png" width="150" height="150">
+        <h1>METODO INDEX OF</h1>
+        <h2>Búsqueda de elementos en array</h2>
+        <br><br>
+        <p>Estudiante se encuentra en el índice No.</p>
+        <p id="std"></p>
+        <script>
+            let num;
+            let std=new Array();
+            //captura array
+            num=parseInt(prompt("Ingresa cantidad de nombres std en array"));
+            for(i=0;i<num;i++){
+                std[i]=prompt("Ingresa nombre std");
+            }
+            //buscar std en array
+            let datob=prompt("Ingresa nombre std a buscar");
+            //indice de elemento
+            let find=std.indexOf(datob.trim());
+            //si el estudiante es encontrado = 0, de lo contrario = -1
+            if (find>-1){
+                swal("Apreciado usuario","estudiante fue encontrado en array","success");
+                document.getElementById("std").innerHTML=find+"..."+datob
+            } else{
+                swal("Apreciado usuario","estudiante NO fue encontrado en array","error");
+                document.getElementById("std").innerHTML=find+"ERROR STD NO ENCONTRADO..."+datob
+            }
+        </script>
+    </center>
+</body>
+</html>

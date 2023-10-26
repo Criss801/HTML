@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAPTURA / LECTURA ARRAYS</title>
+</head>
+<body>
+    <center>
+        <h1>CREACIÓN Y LECTURA DE ARRAYS</h1>
+        <h2>Ciclo For</h2>
+        <h3>A continuación, se imprimen los datos almacenados en Array</h3>
+        <br>
+        <script>
+            //Funcion para símbolo monetario
+            const SPeso = new Intl.NumberFormat('es-CO', {
+            style: 'currency',
+            currency: 'COP',
+            minimumFractionDigits: 0
+            });
+
+            let num;
+            let datos=new Array();
+            //captura array
+            num=parseInt(prompt("Ingresa cantidad de datos a guardar")); //longitud
+            for (i=0; i<num; i++){
+                datos[i]=prompt("Ingresa nombres en array");
+            }
+            //lectura
+            for (i=0; i<num; i++){
+                document.write("<br>"+"<br>");
+                document.write("INDICE"+i+"&nbsp;"+datos[i]+"<br>");
+                console.log(datos[i]);
+            }
+        </script>
+        <br>
+        <p>Final del ejercicio No. 1</p>
+    </center>
+</body>
+</html>
