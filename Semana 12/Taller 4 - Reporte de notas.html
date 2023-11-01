@@ -10,14 +10,14 @@
     <h1>CONDICIONES ANIDADAS</h1>
     <p>Programa que captura nombre, curso, tres notas, calcula la definitiva y su clasificación es:</p>
     <P><3.0 REPROBADO, =3.0 ACEPTABLE, >3.0 APROBADO</p>
-    <Script>
+    <SCript>
         let nombre=prompt("Ingresa tu nombre");
         let curso=prompt("Ingresa tu curso actual");
         let nota1=prompt("Ingresa la primera nota");
         let nota2=prompt("Ingresa la segunda nota");
         let nota3=prompt("Ingresa la tercera nota");
         definitiva=(nota1+nota2+nota3)/3;
-        document.write("<table><caption>RELACIÓN NOTAS</caption><tr><th>NOMBRE</th><td>",nombre,"</td></tr><tr><th>CURSO</th><td>",curso,"</td></tr><tr><th>NOTA 1</th><td>",nota1.toFixed(1),"</td></tr><tr><th>NOTA 2</th><td>",nota2.toFixed(1),"</td></tr><tr><th>NOTA 3</th><td>",nota3.toFixed(1),"</td></tr><tr><th>DEFINITIVA</th><td>",definitiva.Tofixed(2),"</td></tr><tr>");
+        document.write("<table><caption>RELACIÓN NOTAS</caption><tr><th>NOMBRE</th><td>",nombre,"</td></tr><tr><th>CURSO</th><td>",curso,"</td></tr><tr><th>NOTA 1</th><td>",nota1.toFixed(1),"</td></tr><tr><th>NOTA 2</th><td>",nota2.toFixed(1),"</td></tr><tr><th>NOTA 3</th><td>",nota3.toFixed(1),"</td></tr><tr><th>DEFINITIVA</th><td>",definitiva.toFixed(2),"</td></tr><tr>");
         if(definitiva<3){
             document.write("<th>ESTADO</th><td>REPROBADO</td></tr></table>");
         }
@@ -30,6 +30,7 @@
         else{
             document.write("<th>ESTADO</th><td>*****</td></tr></table>");
         }
-    </Script>
+        
+    </SCript>
 </body>
 </html>
