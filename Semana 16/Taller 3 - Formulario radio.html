@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMULARIO RADIO</title>
+    <link rel="stylesheet" href="./css/Formulario 16.css">
+    <script src="./js/Formulario radio.js"></script>
+</head>
+<body>
+    <h1>Formulario nivel de estudios</h1>
+    <form>
+        <table>
+            <caption>Nivel de estudios</caption><tr><th>Nombre</th><td><input type="text" id="nom" size="25"></td></tr>
+            <tr><th>Edad</th><td><input type="number" id="ed" size="25"></td></tr>
+            <tr><th rowspan="6">Nivel de estudios</th>
+            <td><input type="radio" id="radio1" name="estudios">Sin nivel</td></tr>
+            <tr><td><input type="radio" id="radio2" name="estudios">Primaria</td></tr>
+            <tr><td><input type="radio" id="radio3" name="estudios">Secundaria</td></tr>
+            <tr><td><input type="radio" id="radio4" name="estudios">Técnico</td></tr>
+            <tr><td><input type="radio" id="radio5" name="estudios">Universitario</td></tr>
+            <tr><td><input type="radio" id="radio6" name="estudios" style.visibility="hidden">Otros</td></tr>
+            <tr><th>Institución</th><td><input type="text" id="ins" size="25"></td></tr>
+            <tr><th><input type="button" it="bot" value="Ingresar" onclick="Ingresar()"></th><th><input type="reset" id="bot" value="Borrar"></th></tr>
+        </table>
+    </form>
+</body>
+</html>

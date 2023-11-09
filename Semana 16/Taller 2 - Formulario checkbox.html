@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMULARIO CHECKBOX</title>
+    <script src="./js/Formulario checkbox.js"></script>
+    <link rel="stylesheet" href="./css/Formulario 16.css">
+</head>
+<body>
+    <h1>Lenguajes de programación</h1>
+    <form>
+        <table>
+            <tr><th>Nombre</th><td><input type="text" size="20"></td></tr>
+            <tr><th rowspan="4">Lenguajes de prefernecia</th>
+            <td><input type="checkbox" id="len01">JavaScript</td></tr>
+            <tr><td><input type="checkbox" id="len02">Pythom</td></tr>
+            <tr><td><input type="checkbox" id="len03">PHP</td></tr>
+            <tr><td><input type="checkbox" id="len04">C#</td></tr>
+            <tr><th><input type="button" value="Seleccionar" onclick="mostrar()"></th><th><input type="reset" value="Borrar"></th></tr>
+            <tr><th>Lenguajes seleccionados</th><td><input type="text" size="40" id="resp"></td></tr>
+        </table>
+    </form>
+</body>
+</html>
