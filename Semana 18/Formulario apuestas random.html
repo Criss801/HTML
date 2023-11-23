@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NUM APOSTADO</title>
+    <link rel="stylesheet" href="./css/apuesta.css">
+    <script src="./js/apostar.js"></script>
+</head>
+<body>
+    <center>
+        <h1>Apuestas de número aleatorio</h1>
+        <h2>Método Math- random (matemático-aleatorio)</h2>
+        <h3>Adivinar número del 1 al 10</h3>
+        <br><br>
+        <form action="">
+            <label>Número apostado-usuario</label>
+            <input type="text" id="apostado" required><br>
+            <br><br>
+            <label>Número random-sistema js</label>
+            <input type="text" id="resultado" disabled><br>
+            <br><br>
+            <label>Resultado apuesta</label>
+            <input type="text" id="salida" disabled><br>
+        </form>
+        <br><br>
+        <div id="boton">
+            <button onclick="apostar()">¡APOSTAR!</button>
+            <button onclick="cancel()">Borrar</button>
+        </div>
+    </center>
+</body>
+</html>
